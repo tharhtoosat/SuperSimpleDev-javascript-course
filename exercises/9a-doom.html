@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9 Exercises</title>
+  </head>
+  <body>
+    <button>9a</button>
+    <button class="b9">9b</button>
+    <p></p>
+    <button
+      onclick="
+    document.querySelector('.choice').innerHTML = `You chose : heads`"
+    >
+      heads
+    </button>
+    <button
+      onclick="
+    document.querySelector('.choice').innerHTML = `You chose : tails`"
+    >
+      tails
+    </button>
+    <p class="choice"></p>
+    <p></p>
+    <!-- 9d,9e,9f -->
+    <input
+      placeholder="Enter Your Name!"
+      onkeydown="if (event.key === 'Enter') displayName();"
+      class="js-input"
+    />
+    <button onclick="displayName()" ;>Submit</button>
+    <p class="js-message"></p>
+    <p></p>
+    <!-- 9g,9h -->
+    <input
+      placeholder="Type something"
+      class="js-input1"
+      onkeyup="
+        const inputElement = document.querySelector('.js-input1');
+        document.querySelector('.js-message1')
+          .innerHTML = inputElement.value;
+      "
+    />
+
+    <p class="js-message1"></p>
+    <script>
+      function displayName() {
+        const input = document.querySelector(".js-input");
+        const name = input.value;
+        document.querySelector(
+          ".js-message"
+        ).innerHTML = `Your name is : ${name}`;
+        input.value = "";
+        input.focus();
+      }
+      document.querySelector(".b9").innerHTML = "9b done!";
+    </script>
+  </body>
+</html>
