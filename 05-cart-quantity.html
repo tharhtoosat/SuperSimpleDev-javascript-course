@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Variables</title>
+    <title>Cart Quantity</title>
   </head>
   <body>
     <h3>Cart Quantity</h3>
@@ -33,6 +33,7 @@
     <p class="js-cart-quantity"></p>
     <script>
       let cartQuantity = 0;
+      displayCartQuantity();
       function updateCartQuantity(change) {
         if (cartQuantity + change > 10) {
           alert(`The cart is full`);
